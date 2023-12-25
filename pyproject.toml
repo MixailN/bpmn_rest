@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bpmn-rest"
+version = "0.1.0"
+description = ""
+authors = ["michaeln"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+django = "4.2.1"
+djangorestframework = "3.14"
+drf-yasg = "1.21.5"
+psycopg = "^3.1.16"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
