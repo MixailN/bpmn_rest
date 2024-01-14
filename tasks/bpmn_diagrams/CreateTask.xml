@@ -1,0 +1,55 @@
+<mxfile host="Electron" modified="2024-01-14T11:35:46.113Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="19ZtMXpkrHhg6bUOJ1GR" version="22.1.18" type="device">
+  <diagram name="Page-1" id="2a216829-ef6e-dabb-86c1-c78162f3ba2b">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="End" Shape_description="End the current flow." id="t6tIN8p-zD2O0UwS8nXG-1">
+          <mxCell style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;outline=throwing;symbol=general;" parent="1" vertex="1">
+            <mxGeometry x="880" y="520" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="t6tIN8p-zD2O0UwS8nXG-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="t6tIN8p-zD2O0UwS8nXG-3" target="t6tIN8p-zD2O0UwS8nXG-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="start" Shape_description="Start event." id="t6tIN8p-zD2O0UwS8nXG-3">
+          <mxCell style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;outline=standard;symbol=general;" parent="1" vertex="1">
+            <mxGeometry x="100" y="520" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="t6tIN8p-zD2O0UwS8nXG-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="t6tIN8p-zD2O0UwS8nXG-4" target="t6tIN8p-zD2O0UwS8nXG-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Get input parameter" Function="get_input_parameter" Output_variable="%data%" Shape_description="Returns the input parameter that was given when creating an instance of the WorkflowEngine.&#xa;&#xa;As_dictionary: Optional. Indicator whether to treat the given input as a dictionary object (string to dict).&#xa;&#xa;Return: The input_parameter that was given when creating an instance of the WorkflowEngine" As_dictionary="False" id="t6tIN8p-zD2O0UwS8nXG-4">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="200" y="505" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="t6tIN8p-zD2O0UwS8nXG-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="t6tIN8p-zD2O0UwS8nXG-6" target="t6tIN8p-zD2O0UwS8nXG-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Create Serializer" Module="/app/bpmn_rest/tasks/bpmn_utils/create_task.py" Function="create_serializer_instance" Output_variable="%instance%" Class="CreateTask" data="%data%" id="t6tIN8p-zD2O0UwS8nXG-6">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="365" y="505" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="t6tIN8p-zD2O0UwS8nXG-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="t6tIN8p-zD2O0UwS8nXG-7" target="t6tIN8p-zD2O0UwS8nXG-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Validate Serializer" Module="/app/bpmn_rest/tasks/bpmn_utils/create_task.py" Function="validate_serializer_data" Output_variable="%serializer%" Class="CreateTask" serializer="%instance%" id="t6tIN8p-zD2O0UwS8nXG-7">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="530" y="505" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="t6tIN8p-zD2O0UwS8nXG-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="t6tIN8p-zD2O0UwS8nXG-8" target="t6tIN8p-zD2O0UwS8nXG-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Create Task" Module="/app/bpmn_rest/tasks/bpmn_utils/create_task.py" Function="create_task" Output_variable="%result%" Class="CreateTask" serializer="%serializer%" id="t6tIN8p-zD2O0UwS8nXG-8">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="690" y="505" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

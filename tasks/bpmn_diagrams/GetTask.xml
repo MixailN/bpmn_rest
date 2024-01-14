@@ -1,0 +1,88 @@
+<mxfile host="Electron" modified="2024-01-14T11:33:44.586Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="asLVxPXtlmsIXD1Y1gWY" version="22.1.18" type="device">
+  <diagram name="Page-1" id="2a216829-ef6e-dabb-86c1-c78162f3ba2b">
+    <mxGraphModel dx="2284" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="End" Shape_description="End the current flow." id="hxkcHQH5ll6MWrmR1dyC-1">
+          <mxCell style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;outline=throwing;symbol=general;" parent="1" vertex="1">
+            <mxGeometry x="960" y="310" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="hxkcHQH5ll6MWrmR1dyC-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hxkcHQH5ll6MWrmR1dyC-2" target="hxkcHQH5ll6MWrmR1dyC-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="start" Shape_description="Start event." id="hxkcHQH5ll6MWrmR1dyC-2">
+          <mxCell style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;outline=standard;symbol=general;" parent="1" vertex="1">
+            <mxGeometry x="-10" y="320" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="_SLo-eeT8n_8U_p6gKJA-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hxkcHQH5ll6MWrmR1dyC-3" target="_SLo-eeT8n_8U_p6gKJA-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Get tasks" Module="/app/bpmn_rest/tasks/bpmn_utils/get_task.py" Function="get_tasks" Class="GetTask" Output_variable="%result%" id="hxkcHQH5ll6MWrmR1dyC-3">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="530" y="130" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="_SLo-eeT8n_8U_p6gKJA-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="hxkcHQH5ll6MWrmR1dyC-6" target="_SLo-eeT8n_8U_p6gKJA-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Get input parameter" Function="get_input_parameter" Output_variable="%input%" Shape_description="Returns the input parameter that was given when creating an instance of the WorkflowEngine.&#xa;&#xa;As_dictionary: Optional. Indicator whether to treat the given input as a dictionary object (string to dict).&#xa;&#xa;Return: The input_parameter that was given when creating an instance of the WorkflowEngine" As_dictionary="True" id="hxkcHQH5ll6MWrmR1dyC-6">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="80" y="305" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="FGhbI6fzcr2Kh25m3XNf-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="_SLo-eeT8n_8U_p6gKJA-1" target="FGhbI6fzcr2Kh25m3XNf-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="" Type="Parallel Gateway" Shape_description="A parallel gateway" id="_SLo-eeT8n_8U_p6gKJA-1">
+          <mxCell style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;background=gateway;outlineConnect=0;outline=none;symbol=parallelGw;" parent="1" vertex="1">
+            <mxGeometry x="670" y="310" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="_SLo-eeT8n_8U_p6gKJA-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="_SLo-eeT8n_8U_p6gKJA-4" target="_SLo-eeT8n_8U_p6gKJA-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Get task by id" Module="/app/bpmn_rest/tasks/bpmn_utils/get_task.py" Function="get_task" Class="GetTask" Output_variable="%result%" task_id="%input.task_id%" id="_SLo-eeT8n_8U_p6gKJA-4">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="530" y="490" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="True" Value="True" source="_SLo-eeT8n_8U_p6gKJA-6" target="hxkcHQH5ll6MWrmR1dyC-3" id="_SLo-eeT8n_8U_p6gKJA-10">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0;entryY=0.5;entryDx=0;entryDy=0;html=1;" parent="1" source="_SLo-eeT8n_8U_p6gKJA-6" target="hxkcHQH5ll6MWrmR1dyC-3" edge="1">
+            <mxGeometry x="0.0612" y="-5" relative="1" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" Type="Exclusive Gateway" Shape_description="An exclusive gateway" id="_SLo-eeT8n_8U_p6gKJA-6">
+          <mxCell style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;background=gateway;outlineConnect=0;outline=none;symbol=exclusiveGw;" parent="1" vertex="1">
+            <mxGeometry x="410" y="320" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="False" Value="False" source="_SLo-eeT8n_8U_p6gKJA-6" target="_SLo-eeT8n_8U_p6gKJA-4" id="_SLo-eeT8n_8U_p6gKJA-11">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.008;entryY=0.613;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="_SLo-eeT8n_8U_p6gKJA-6" target="_SLo-eeT8n_8U_p6gKJA-4" edge="1">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="_SLo-eeT8n_8U_p6gKJA-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="_SLo-eeT8n_8U_p6gKJA-12" target="_SLo-eeT8n_8U_p6gKJA-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Is object empty?" Module="/app/bpmn_rest/tasks/bpmn_utils/get_task.py" Function="is_empty" Shape_description="Check if an item is empty&#xa;&#xa;item: The item to check&#xa;&#xa;Return: Boolean True or False" Class="GetTask" task_id="%input.task_id%" id="_SLo-eeT8n_8U_p6gKJA-12">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="250" y="305" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="FGhbI6fzcr2Kh25m3XNf-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="FGhbI6fzcr2Kh25m3XNf-2" target="hxkcHQH5ll6MWrmR1dyC-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="Get response" Module="/app/bpmn_rest/tasks/bpmn_utils/get_task.py" Function="get_tasks_response_data" Class="GetTask" Output_variable="%response%" serializer="%result%" id="FGhbI6fzcr2Kh25m3XNf-2">
+          <mxCell style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="780" y="295" width="120" height="80" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
