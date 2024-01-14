@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from tasks.models import Task
 from tasks.serializers import TaskCreateSerializer, TaskSerializer
 from BPMN_RPA.WorkflowEngine import WorkflowEngine
+import requests
 
 __all__ = [
     "TaskListCreateView",
@@ -47,6 +48,9 @@ class TaskListCreateView(generics.ListCreateAPIView):
         doc = engine.open(filepath=pad)
         steps = engine.get_flow(doc)
         result = engine.run_flow(steps)
+        url = 'http://127.0.0.1:5000/api/v1/send_message'
+        req_body = {'message': 'New task created with id: ' + str(result.id)}
+        x = requests.post(url, json=req_body)
         return Response(data=TaskSerializer(result).data, status=status.HTTP_201_CREATED)
 
     def get(self, request):
